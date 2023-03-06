@@ -332,6 +332,9 @@
                     <div class=" shadow-lg rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
                         <form id="signUpForm" onsubmit="SubmitSignup()" >
                             <div class="row g-3">
+                                <div class="col-xl-12" hidden >
+                                    <input  hidden type="text" name="type"  value="signUp">
+                                </div>
                                 <div class="col-xl-12">
                                     <input type="text" name="Name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
@@ -609,8 +612,13 @@
             fetch(
               "https://script.google.com/macros/s/AKfycbyh6glR-jiOLPTgE3KndBghgBoXoZ0N0Nw_GF1nhPzAG1to7W69BHEHRM9p6RDo4kId/exec",
               {
+                redirect: "follow",
                 method: "POST",
-                body: formDatab
+                body: formDatab,
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                  },
+                  crossDomain: true,
               }
             )
               .then((res) => res.json())
@@ -618,29 +626,30 @@
                 console.log(data);
               })
               .catch((error) => {
+                console.log("nooo")
                 console.log(error);
               });
           }
-          function SubmitContact() {
-            const formEle = document.getElementById("contactUsForm");
-            const formDatab = new FormData(formEle);
-            console.log(formEle)
-            console.log(formDatab)
-            fetch(
-              "https://script.google.com/macros/s/AKfycbyh6glR-jiOLPTgE3KndBghgBoXoZ0N0Nw_GF1nhPzAG1to7W69BHEHRM9p6RDo4kId/exec",
-              {
-                method: "POST",
-                body: formDatab
-              }
-            )
-              .then((res) => res.json())
-              .then((data) => {
-                console.log(data);
-              })
-              .catch((error) => {
-                console.log(error);
-              });
-          }
+        function SubmitContact() {
+        const formEle = document.getElementById("contactUsForm");
+        const formDatab = new FormData(formEle);
+        console.log(formEle)
+        console.log(formDatab)
+        fetch(
+            "https://script.google.com/macros/s/AKfycbyh6glR-jiOLPTgE3KndBghgBoXoZ0N0Nw_GF1nhPzAG1to7W69BHEHRM9p6RDo4kId/exec",
+            {
+            method: "POST",
+            body: formDatab
+            }
+        )
+            .then((res) => res.json())
+            .then((data) => {
+            console.log(data);
+            })
+            .catch((error) => {
+            console.log(error);
+            });
+        }
     </script>
     </html>
 </body>
