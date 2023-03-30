@@ -71,8 +71,8 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Empowering young coder</h1>
-                            <a href="freetrial" class="btn btn-success py-md-3 px-md-5 me-3 animated slideInLeft">Sign Up</a>
-                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            <button href="freetrial" class="btn btn-success py-md-3 px-md-5 me-3 animated slideInLeft">Sign Up</button>
+                            <button href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight" onclick="scrollToDiv()">Contact Us</button>
                         </div>
                     </div>
                 </div>
@@ -173,6 +173,9 @@
                         <div class="ps-4">
                             <h5 class="mb-2 text-white">Call to ask any question</h5>
                             <h4 class="text-secondary mb-0">+65 8715 2540</h4>
+                            <button class="btn btn-success" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                              </button>
                         </div>
                     </div>
                     <a href="quote.html" class="btn  btn-success py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Sign up now</a>
@@ -303,6 +306,7 @@
 
 
     <!-- Quote Start -->
+    <div class="scroll-div"></div>
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -649,6 +653,16 @@
             .catch((error) => {
             console.log(error);
             });
+        }
+        function openWhatsApp() {
+            var number = "+6587152540";
+            var message = "Hello, let's chat!";
+            window.location.href = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
+        }
+        function scrollToDiv() {
+            var divs = document.getElementsByClassName("scroll-div");
+            var div = divs[0];
+            div.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
     </html>
