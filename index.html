@@ -29,9 +29,69 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Position the button */
+        .floating-button {
+          position: fixed;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: 99;
+          opacity: 1;
+          transition: opacity 0.5s ease-in-out;
+        }
+        /* Style the button */
+        .floating-button button {
+          background-color: #25D366;
+          color: white;
+          padding: 16px;
+          font-size: 20px;
+          border: none;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        /* Add a hover effect to the button */
+        .floating-button button:hover {
+          background-color: #128C7E;
+        }
+        /* Make the button fade out when scrolling */
+        .floating-button.fade-out {
+          opacity: 0;
+        }
+      </style>
 </head>
 
 <body class="body">
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()" style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+    </button>
+    <script>
+        var whatsappButton = document.getElementById("whatsapp-button");
+    var isScrolling = false;
+    var timer = null;
+
+    window.addEventListener("scroll", function() {
+        // clear the timeout on scroll
+        clearTimeout(timer);
+
+        // set isScrolling to true
+        isScrolling = true;
+
+        // set the button's opacity to 0
+        whatsappButton.style.opacity = 0.2;
+
+        // set a timeout to check if the user has stopped scrolling
+        timer = setTimeout(function() {
+            isScrolling = false;
+
+            // set the button's opacity to 1 if the user has stopped scrolling
+            if (!isScrolling) {
+                whatsappButton.style.opacity = 1;
+            }
+        }, 100);
+    });
+    </script>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
@@ -55,7 +115,6 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="Courses.html" class="nav-item text-light nav-link">Syllabus</a>
                     <a href="Projects.html" class="nav-item text-light nav-link">Projects</a>
-                    <a href="Contact.html" class="nav-item text-light nav-link">Contact</a>
                     </div>
                     
                 </div>
@@ -163,22 +222,13 @@
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
                             <h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Project based approach</h5>
-                            <!--<h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Fair Prices</h5>-->
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2 text-white">Call to ask any question</h5>
-                            <h4 class="text-secondary mb-0">+65 8715 2540</h4>
-                            <button class="btn btn-success" onclick="openWhatsApp()">
-                                <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
-                              </button>
-                        </div>
+                        <!-- <button class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                        </button> -->
                     </div>
-                    <a href="quote.html" class="btn  btn-success py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Sign up now</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -306,7 +356,6 @@
 
 
     <!-- Quote Start -->
-    <div class="scroll-div"></div>
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -587,6 +636,7 @@
     <a href="#" class="btn btn-lg  btn-success btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -659,11 +709,7 @@
             var message = "Hello, let's chat!";
             window.location.href = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
         }
-        function scrollToDiv() {
-            var divs = document.getElementsByClassName("scroll-div");
-            var div = divs[0];
-            div.scrollIntoView({ behavior: 'smooth' });
-        }
+    
     </script>
     </html>
 </body>
