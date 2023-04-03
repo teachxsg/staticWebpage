@@ -499,3 +499,9 @@ h6,
         margin-bottom: -75px;
     }
 }
+
+.thick-green-underline {
+    border-bottom: 4px solid rgb(0, 174, 0);
+    text-decoration: none;
+}
+  
