@@ -92,7 +92,9 @@ h6,
 .btn-primary{
     color: #06da3f;
     box-shadow: inset 0 0 0 50px transparent;
-},
+}
+
+
 .btn-secondary {
     color: #FFFFFF;
     box-shadow: inset 0 0 0 50px transparent;
