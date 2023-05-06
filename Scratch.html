@@ -29,6 +29,53 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+   /* CLick me button */
+    .heart {
+        font-size: 20px;
+        color: white;
+        margin-bottom:30px;
+        width: 100px;
+        padding: 0 10px 0 10px;
+        border-radius: 5px;
+        background-color: #198754;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+    }
+    .heart:hover {
+        cursor: pointer;
+        animation-play-state: paused;
+        box-shadow: rgba(25, 135, 84, 0.35) 0px 5px 15px;
+    }
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+/* scratch project */
+.scratch {
+  display: none;
+}
+/* scratch project after click */
+.scratch-click {
+  animation: opn 1s normal;
+}
+@keyframes opn {
+  0% { transform: scale(0);}
+  100% {transform: scale(1);}
+}
+.down{
+    position: relative;
+    animation-name: bottom-content;
+    animation-duration: 1s;
+}
+@keyframes bottom-content {
+  25% {top:30px;}
+  50% {top:20px;}
+  75% {top:10px;}
+  100% {top:0px;}
+}
+</style>
 </head>
 
 <body class="body">
@@ -92,7 +139,11 @@
                             <h5 class="fw-bold text-secondary text-uppercase">Level 1 </h5>
                             <h1 class="mb-0 text-light">Object Oriented Programming</h1>
                         </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
+                        <div class="heart scratch-basic" id="cm" onclick="onClick()">Click me</div>
+                        <div id="sch">
+                            <iframe class='scratch-embed scratch-basic' src="https://scratch.mit.edu/projects/250173582/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                        </div>
+                    <!--    <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture"> 
                         <p class="text-white"> </p>
                         <p class="text-white"> </p>
                         <p class="text-white"> </p>
@@ -100,9 +151,9 @@
                         <p class="text-white"> </p>
                         <p class="text-white"> </p>
                         <p class="text-white"> </p>
-                        <p class="text-white"> </p>
+                        <p class="text-white"> </p> -->
                      </div>
-                    <div class="mb-8">
+                    <div class="mb-8" id="down-stracth-content">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 2 </h5>
                             <h1 class="mb-0 text-light">Requests library and web server </h1>
@@ -248,8 +299,19 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-HZT51PC7PR');
+// elent - variable is used to points the scratch application
+  var elemt = document.querySelector("#sch")
+  elemt.classList.add("scratch");
+
+  function onClick() {
+    console.log('click');
+    document.querySelector("#down-stracth-content").classList.add("down");
+    elemt.classList.remove("scratch");
+    elemt.classList.add("scratch-click");
+    document.getElementById("cm").style.display="none";
+ 
+  }
 </script>
 
     <!-- Template Javascript -->
