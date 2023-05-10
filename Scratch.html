@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>TeachX - Next level learning</title>
@@ -29,53 +28,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-   /* CLick me button */
-    .heart {
-        font-size: 20px;
-        color: white;
-        margin-bottom:30px;
-        width: 100px;
-        padding: 0 10px 0 10px;
-        border-radius: 5px;
-        background-color: #198754;
-        animation: beat .25s infinite alternate;
-        transform-origin: center;
-    }
-    .heart:hover {
-        cursor: pointer;
-        animation-play-state: paused;
-        box-shadow: rgba(25, 135, 84, 0.35) 0px 5px 15px;
-    }
-@keyframes beat {
-  to {
-    transform: scale(1.4);
-  }
-}
-/* scratch project */
-.scratch {
-  display: none;
-}
-/* scratch project after click */
-.scratch-click {
-  animation: opn 1s normal;
-}
-@keyframes opn {
-  0% { transform: scale(0);}
-  100% {transform: scale(1);}
-}
-.down{
-    position: relative;
-    animation-name: bottom-content;
-    animation-duration: 1s;
-}
-@keyframes bottom-content {
-  25% {top:30px;}
-  50% {top:20px;}
-  75% {top:10px;}
-  100% {top:0px;}
-}
-</style>
+
 </head>
 
 <body class="body">
@@ -108,8 +61,8 @@
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
-                <div style="text-align: center;margin-top: 50px;">
-                    <img src="img/scratch-logo.png" alt="python basics picture" style="max-width: 400px;max-height: 400px;">
+                <div style="text-align: center;margin-top: 50px; ">
+                    <img style="width:35%" src="img/scratch-logo.png" alt="python basics picture"  >
                 </div>
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">Introduction to Scratch</h1> 
@@ -137,96 +90,74 @@
                     <div class="mb-8">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 1 </h5>
-                            <h1 class="mb-0 text-light">Object Oriented Programming</h1>
+                            <h1 class="mb-0 text-light">Getting Started with Scratch</h1>
                         </div>
-                        <div class="heart scratch-basic" id="cm" onclick="onClick()">Click me</div>
-                        <div id="sch">
-                            <iframe class='scratch-embed scratch-basic' src="https://scratch.mit.edu/projects/250173582/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                        </div>
-                    <!--    <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture"> 
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p> -->
+                        <p class="text-white">Here we cover the various parts of the Scratch interface such as the stage, the sprite editor, the blocks palette, and the scripts area. You would learn how to navigate around the interface and how to use each part to create your Scratch projects. </p>
+                        <p class="text-white"> In Scratch, a sprite is a graphic object that can be programmed to move, change appearance, and interact with other sprites and the stage. customizing your Scratch project involves adding and deleting sprites, choosing and customizing backdrops, and adjusting the size and position of your sprites.In our course we teach how to use sprite.</p>
+                        <p class="text-white">Another important concept we covered in our course is blocks. Scratch uses blocks to represent programming concepts such as loops, conditionals, and variables. Scratch involves dragging and dropping blocks, connecting them together to create a set of instructions, and specifying an event to trigger the script. </p>
+                        <p class="text-white"> In Scratch, Adding sound and background images can greatly enhance the overall quality of a Scratch project. The Motion category in the Blocks palette is used to control the movement and animation of sprites. This category contains blocks that allow you to move sprites, change their direction, and create animations.We teach how to add sound and motion in scratch.</p>
+                        <p class="text-white">To put these concepts into practice, we have a capstone project in our scratch tutorial. The capstone project is Dancing Sprites. That allows to apply the concepts such as sprites, motion blocks, adding sound and background. Overall, a dancing sprites project in Scratch provides an excellent opportunity for beginners to learn key programming and animation concepts while having fun creating an entertaining project.</p>
+                         <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s" src="https://scratch.mit.edu/projects/139632761/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>  
                      </div>
+
                     <div class="mb-8" id="down-stracth-content">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 2 </h5>
-                            <h1 class="mb-0 text-light">Requests library and web server </h1>
-                        </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                    </div>
+                            <h1 class="mb-0 text-light">Scratch Programming Fundamentals</h1>
+                        </div> 
+                        <p class="text-white"> The important topic we cover in this course is variables and data types. These  are fundamental concepts in programming, and mastering them is essential for creating more advanced and complex projects in Scratch.</p>
+                        <p class="text-white">A variable is a container that stores a value, which can be a number, a string, or a boolean value. You can create a variable in Scratch by clicking on the "Variables" button in the block palette and selecting "Make a Variable."Once you create a variable, you can use it in your scripts by dragging the variable block into your program and assigning a value to it. In Scratch, there are four data types: numbers, strings, booleans, and lists. A number is a value that can be used in mathematical calculations, such as adding or subtracting. A string is a sequence of characters, such as a word or a sentence. Booleans are values that are either true or false. Lists are collections of values, such as a list of high scores or a list of player names.</p>
+                        <p class="text-white"> Loops allow you to repeat a section of code multiple times. In Scratch, there are two types of loops: "repeat" and "forever." The "repeat" block allows you to repeat a set of blocks a specific number of times, while the "forever" block allows you to repeat a set of blocks indefinitely.</p>
+                        <p class="text-white"> Conditionals, on the other hand, allow you to execute different sections of code based on whether a certain condition is true or false. In Scratch, there are several blocks for conditionals, such as "if," "if else," and "wait until." The "if" block allows you to execute a set of blocks only if a condition is true, while the "if else" block allows you to execute a different set of blocks if the condition is false. The "wait until" block allows you to pause the program until a specific condition is true.</p>
+                        <p class="text-white"> Control structures, such as loops and conditionals, are essential in programming and can help you to control the flow of your program. Scratch provides several blocks to create loops and conditionals, which are located in the Control category of the block palette. Here we discuissed how to use these control structures.</p>
+                        <p class="text-white">Input and output are essential concepts in programming, and Scratch provides support for them through sensing and broadcasting. Sensing blocks allow you to read input from various sources, such as the mouse or keyboard, while broadcasting blocks allow you to send output to other parts of your program.</p>
+                         <p class="text-white">To apply these concepts, our course includes a capstone project.The project is a fun and engaging task that requires students to apply what they have learned in the course. The capstone project is timer. This project covers the looping, conditional statement and the use of variables to keep track of the time remaining on the timer and to update the display of the timer as it counts down.  </p>
+                         <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/11549899/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                         </div>
+
                     <div class="mb-8">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 3 </h5>
-                            <h1 class="mb-0 text-light">Pandas  </h1>
+                            <h1 class="mb-0 text-light">Creating Interactive Games and Animations </h1>
                         </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
+                        <p class="text-white">  Game design is the process of creating a game's rules, mechanics, and objectives. In Scratch, game design involves choosing the sprites, backgrounds, and game mechanics that make up the game. It also includes creating the game's flowchart and programming the game's logic.</p>
+                        <p class="text-white"> Character animation is the process of bringing characters to life through movement and expressions. In Scratch, you can animate characters by using motion blocks and events to move and change the appearance of sprites. You can also create complex animations by using variables and loops to control the timing and movement of sprites.</p>
+                        <p class="text-white">Game mechanics are the rules and mechanics that govern how a game is played. In Scratch, game mechanics can include moving sprites, creating obstacles, collecting items, and keeping score. You can use Scratch's control blocks, sensing blocks, and operators to create complex game mechanics that respond to user input. </p>
+                        <p class="text-white"> User input is the way users interact with the game or animation. In Scratch, user input can include using the keyboard, mouse, or touch screen to control sprites and interact with the game. You can use sensing blocks to read user input and control blocks to respond to user input. </p>
+                        <p class="text-white">Sound and music are an essential part of creating engaging games and animations. In Scratch, you can use sound and music to enhance the gameplay experience, create atmosphere, and provide feedback to the user. You can use sound and music blocks to play sounds, control the volume, and create sound effects. </p>
+                        <p class="text-white">Overall, creating interactive games and animations in Scratch involves a combination of game design, character animation, game mechanics, user input, and sound and music. By mastering these topics, you can create engaging and interactive projects in Scratch i.e.,Hangman Game. </p>
                         <p class="text-white"> </p>
                         <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"   src="https://scratch.mit.edu/projects/492399765/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     </div>
+
                     <div class="mb-8">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 4 </h5>
-                            <h1 class="mb-0 text-light">NumPy </h1>
+                            <h1 class="mb-0 text-light">Advanced Scratch Programming Techniques </h1>
                         </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>  
+                        <p class="text-white"> Creating functions for modular programming in Scratch allows you to break your code down into smaller, reusable pieces, which can make your code easier to read, understand, and debug. This technique involves defining inputs, creating a custom block, adding code, and calling the function from anywhere in your project. By using functions, you can avoid duplicating code, save time, and improve the organization and structure of your Scratch projects.</p>
+                        <p class="text-white"> Importing external media and resources in Scratch is the process of adding files or assets to your project that are not already included in the Scratch editor. These files can include images, sounds, music, and other media that you want to use in your project.Importing external media and resources in Scratch is a useful technique that can expand the possibilities of your projects and make them more engaging and interesting. </p>
+                        <p class="text-white"> Our Capstone Project, the interactive story creation, is designed to help students apply their knowledge of Advanced Scratch Programming Techniques. The project involves creating a program with functions are used to organize code and make it more efficient, readable, and reusable. This project also uses external media and resources for and more confident and proficient Scratch projects.</p>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"   src="https://scratch.mit.edu/projects/187214101/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                        <p class="text-white">Debugging and troubleshooting are essential skills for any programmer, including those using Scratch. Debugging involves identifying and fixing errors or bugs in your code, while troubleshooting involves identifying and resolving issues with your project's functionality. </p>
+                        <p class="text-white"> To effectively debug and troubleshoot your Scratch projects, it's important to read error messages carefully, check for typos and syntax errors, and test your code frequently. Scratch also includes several debugging tools, such as the "wait" and "show" blocks, that can help you identify and fix errors in your code.By practicing these techniques and developing your debugging and troubleshooting skills, you can improve the quality and reliability of your Scratch projects, and become a more confident and proficient Scratch programmer.</p>
+                        <p class="text-white"> Finally, the course concludes with a graduation quiz. The quiz is designed to test students' understanding of the material covered in the course. It is an opportunity for students to assess their progress and identify areas where they may need additional study.</p>
+                        <img class="img-fluid w-100 rounded mb-5 wow zoomIn" data-wow-delay="0.6s" src="img/Bugs.jpg" alt="python basics picture">
                     </div>
+
                     <div class="mb-8">
                         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                             <h5 class="fw-bold text-secondary text-uppercase">Level 5 </h5>
-                            <h1 class="mb-0 text-light">Data Visualisation using Python </h1>
+                            <h1 class="mb-0 text-light">Sharing and Collaborating with Scratch</h1>
                         </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                    </div>
-                    <div class="mb-8">
-                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                            <h5 class="fw-bold text-secondary text-uppercase">Level 5 </h5>
-                            <h1 class="mb-0 text-light">Introduction to Artificial Intelligence </h1>
-                        </div>
-                        <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="python basics picture">
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
-                        <p class="text-white"> </p>
+                        <p class="text-white">Publishing a Scratch project on the Scratch website is a straightforward process that allows you to share your projects with a global community of Scratch users. To publish a project, you first need to create an account on the Scratch website if you haven't already done so.Publishing your project on the Scratch website can be a great way to get recognition for your work, build your online presence, and connect with other Scratch users from around the world. </p>
+                        <p class="text-white">Collaborating with other Scratch users and remixing projects is an essential part of the Scratch community. The Scratch website allows users to share their projects with others and also enables users to collaborate on projects by remixing them. </p>
+                        <p class="text-white">Remixing a project involves taking someone else's project and making changes to it to create something new. When you remix a project, you are creating a new version of the original project, which you can modify, add to, or change in any way you like. Collaborating on a project involves working with other Scratch users to create a project together. This can involve sharing ideas, dividing up tasks, and working together to create a final product. Collaboration can be done by working together in the same physical location or by using the online collaboration tools available on the Scratch website. Collaboration and remixing are essential parts of the Scratch community and allow users to learn from one another, share ideas, and create projects that are more significant than what they could create on their own.</p>
+                        <p class="text-white">Scratch also offers an offline editor, which allows you to create Scratch projects without an internet connection. To use the offline editor, you need to download and install it on your computer. The offline editor has the same features as the online editor, but you can work on your projects even if you don't have an internet connection.</p>
+                        <p class="text-white"> The course concludes with a Mario game. The Project encompasses every idea we've learned thus far in this course.This project demonstrates our mastery of the material.</p>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/196684240/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <p class="text-white"> Finally, the course concludes with a graduation quiz. The quiz is designed to test students' understanding of the material covered in the course. It is an opportunity for students to assess their progress and identify areas where they may need additional study.</p>
                     </div>
                     <!-- Blog Detail End -->
  
@@ -300,18 +231,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-HZT51PC7PR');
-// elent - variable is used to points the scratch application
-  var elemt = document.querySelector("#sch")
-  elemt.classList.add("scratch");
 
-  function onClick() {
-    console.log('click');
-    document.querySelector("#down-stracth-content").classList.add("down");
-    elemt.classList.remove("scratch");
-    elemt.classList.add("scratch-click");
-    document.getElementById("cm").style.display="none";
- 
-  }
 </script>
 
     <!-- Template Javascript -->
