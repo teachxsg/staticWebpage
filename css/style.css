@@ -518,5 +518,39 @@ h6,
     margin-left: auto; 
     margin-right: auto;
     margin-bottom: 30px;
+    border-radius: 25px;
 }
   
+.heart {
+    cursor: pointer;
+    animation: beat .25s infinite alternate;
+    transform-origin: center;
+  }
+  
+  .heart:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+    transform-origin: center;
+  }
+  
+  /* Heart beat animation */
+  @keyframes beat {
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  .pre-requirement{
+    background-color: rgb(83, 224, 97);
+    color: black;
+    font-weight: 600;
+    border-radius: 20px;
+   
+  }
+  .pre-requisite{
+    background-color: rgb(69, 174, 219);
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
