@@ -552,5 +552,49 @@ h6,
     color: white;
     font-weight: 500;
     border-radius: 20px;
-    margin-right: 10px;
+    font-size: 11px;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+
+  .card1 {
+    transition: 0.5s;
+  }
+  
+  .card1:hover {
+    box-shadow: 0px 0px 20px gray !important;
+    transition: 0.3s;
+    animate: glow;
+  }
+  .card1 {
+    background-size: cover;
+    background-position: center; 
+  }
+
+  .zoom {
+
+    transition: transform .2s;
+
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+  }
+
+  .hide{
+    display: none !important;
+  }
+  .showw{
+    animation: opn 0.2s normal;
+  }
+  @keyframes opn {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
   }
