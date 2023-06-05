@@ -181,42 +181,173 @@
     </div>
     <!-- Team End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid   text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container justify-content-center">
-            <div class="row gx-5"> 
-                <div class="col-lg-8 col-md-6 justify-content-center">
-                    <div class="row gx-5">
-                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="text-light mb-0">Get In Touch</h3>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="contactlah">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-secondary text-uppercase">Contact us</h5>
+                        <h1 class="mb-0 text-white">Schedule your free trial</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4 text-secondary"><i class="fa fa-reply text-secondary me-3"></i>Replies
+                                within 30 minutes!</h5>
                         </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-envelope-open text-primary me-2"></i>
-                            <p class="mb-0">admin@teachx.me</p>
+
+                    </div>
+                    <p class="mb-4 text-white">Contact us through <u class="thick-green-underline">Whatsapp, phone,
+                            email or form</u> to ask any questions about our programme or to <u
+                            class="thick-green-underline">schedule a free trial</u>.</p>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white shadow-lg rounded"></i>
                         </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-telephone text-primary me-2"></i>
-                            <p class="mb-0">+65 8065 8664</p>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white ">Call to ask any question</h5>
+                            <h4 class="text-secondary mb-0">+65 8065 8664</h4>
                         </div>
-                        <div class="d-flex mt-4"> 
-                            <a class="btn btn-success btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a> 
-                            <a class="btn btn-success btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-envelope-open text-white"></i>
                         </div>
-                    </div> 
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white">Email For more info</h5>
+                            <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                        </div>
+
+                    </div>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-success btn-square me-2"
+                            href="https://m.facebook.com/people/TeachX-SG/100088575681736/"><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-success btn-square" href="https://www.instagram.com/teachxsg/"><i
+                                class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                    <!-- <div class="col-lg-4">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                            <div class="bg-secondary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2 text-white">Email For more info</h5>
+                                <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec -->
+                <div class="col-lg-5">
+                    <div class=" shadow-lg rounded h-100 d-flex align-items-center p-5 wow zoomIn"
+                        data-wow-delay="0.9s">
+                        <form id="signUpForm" name="ok">
+                            <div class="row g-3">
+                                <div class="col-xl-12" hidden>
+                                    <input hidden type="text" name="type" value="signUp">
+                                </div>
+                                <div class="col-xl-12">
+                                    <input type="text" name="name" class="form-control bg-light border-0"
+                                        placeholder="Your Name" style="height: 55px;" maxlength="36">
+                                    <div id="nameError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" class="form-control bg-light border-0"
+                                        placeholder="Email" style="height: 55px;">
+                                    <div id="emailError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="phone" name="phone" class="form-control bg-light border-0"
+                                        placeholder="Phone" style="height: 55px;" pattern="[689]\d{7}">
+                                    <div id="phoneError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" name="subject" style="height: 55px;">
+                                        <option disabled selected>Course</option>
+                                        <option value="1">Scratch lessons</option>
+                                        <option value="2">Python lessons</option>
+                                        <option value="3">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0"
+                                        placeholder="Your message" style="height: 55px; resize: none;"
+                                        maxlength="120"></textarea>
+                                    <div id="messageError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-success w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec'
+                            const form = document.forms['ok']
+
+                            form.addEventListener('submit', e => {
+                                e.preventDefault();
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                                const myElement = document.getElementById('signUpForm');
+                                myElement.innerHTML = '<div style="background-color:green;color:white;padding:10px;"><p>We will contact you back ASAP.</p>- TeachX Team</div>'
+                            })
+                        </script>
+                        <script>
+                            function validateForm() {
+                                let name = document.forms["signUpForm"]["name"].value;
+                                let email = document.forms["signUpForm"]["email"].value;
+                                let phone = document.forms["signUpForm"]["phone"].value;
+                                let message = document.forms["signUpForm"]["message"].value;
+
+                                // Name validation
+                                if (name.length > 36) {
+                                    alert("Name should be maximum 36 characters long.");
+                                    return false;
+                                }
+
+                                // Email validation
+                                let emailRegex = /\S+@\S+\.\S+/;
+                                if (!emailRegex.test(email)) {
+                                    alert("Please enter a valid email address.");
+                                    return false;
+                                }
+
+                                // Phone validation
+                                let phoneRegex = /^\+65[689]\d{7}$/;
+                                if (!phoneRegex.test(phone)) {
+                                    alert("Please enter a valid Singapore phone number.");
+                                    return false;
+                                }
+
+                                // Message validation
+                                if (message.split(" ").length > 120) {
+                                    alert("Message should be maximum 120 words long.");
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                        </script>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Quote End -->
+    <div class="container-fluid   text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">TeachX PTE LTD</a>. All Rights Reserved. 
-						
-						credits to  <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">TeachX PTE LTD</a>. All
+                            Rights Reserved.
+
+                            credits to <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </p>
                     </div>
                 </div>
             </div>

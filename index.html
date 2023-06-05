@@ -763,61 +763,7 @@
         gtag('config', 'G-QQXR0BMWL7');
     </script>
     <script>
-        function SubmitSignup() {
-            event.preventDefault(); // prevent the form from submitting in the default way
-            const formData = new FormData(document.getElementById('signUpForm'));
-            const formValues = {};
-            for (let entry of formData.entries()) {
-                formValues[entry[0]] = entry[1];
-            };
-            console.log(formValues);
-            fetch('https://script.google.com/macros/s/AKfycbwnd5FTbNkpGvHoA4QKIC1oxBLMgV2J6XMPaCY5QL76-Qz7FdPgNX-rL9GWZ_i3SbpL/exec', {
-                method: 'POST',
-                body: JSON.stringify(formValues)
-            })
-                .then(response => {
-                    console.log('Form data sent successfully');
-                })
-                .catch(error => {
-                    console.error('Error sending form data:', error);
-                });
-        };
-        function openWhatsApp() {
-            var number = "+6580658664";
-            var message = "Hi TeachX, I'm interested in a free trial";
-            window.location = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
-        }
-        function scrollToDiv(divId) {
-            const element = document.getElementById(divId);
-            if (element) {
-                window.scrollTo({
-                    behavior: 'smooth',
-                    top: element.offsetTop
-                });
-            }
-        }
-        // Select all elements with class ".prerequesite"
-        var prerequisiteCards = document.querySelectorAll(".prerequesite");
-
-        // Add event listeners to each prerequisite card
-        prerequisiteCards.forEach(function (card) {
-            card.addEventListener("mouseover", showPreRequisite);
-            card.addEventListener("mouseout", hidePreRequisite);
-        });
-
-        function showPreRequisite() {
-            var preRequisiteElement = this.querySelector(".pre-requisite");
-            preRequisiteElement.classList.remove("hide");
-            preRequisiteElement.classList.add("showw");
-        }
-
-        function hidePreRequisite() {
-            var preRequisiteElement = this.querySelector(".pre-requisite");
-            preRequisiteElement.classList.add("hide");
-            preRequisiteElement.classList.remove("showw");
-        }
-
-
+       
 
     </script>
 
