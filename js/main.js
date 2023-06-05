@@ -150,6 +150,12 @@ function openWhatsApp() {
     var message = "Hi TeachX, I'm interested in a free trial";
     window.location = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
 }
+
+
+function moveToDiv(divId) {
+    window.location.href = 'index.html#' + divId;
+}
+
 function scrollToDiv(divId) {
     const element = document.getElementById(divId);
     if (element) {
@@ -180,3 +186,27 @@ function hidePreRequisite() {
     preRequisiteElement.classList.remove("showw");
 }
 
+var whatsappButton = document.getElementById("whatsapp-button");
+var isScrolling = false;
+var timer = null;
+
+window.addEventListener("scroll", function () {
+    // clear the timeout on scroll
+    clearTimeout(timer);
+
+    // set isScrolling to true
+    isScrolling = true;
+
+    // set the button's opacity to 0
+    whatsappButton.style.opacity = 0.2;
+
+    // set a timeout to check if the user has stopped scrolling
+    timer = setTimeout(function () {
+        isScrolling = false;
+
+        // set the button's opacity to 1 if the user has stopped scrolling
+        if (!isScrolling) {
+            whatsappButton.style.opacity = 1;
+        }
+    }, 100);
+});

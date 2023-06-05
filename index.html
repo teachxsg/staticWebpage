@@ -79,32 +79,7 @@
         style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
         <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
     </button>
-    <script>
-        var whatsappButton = document.getElementById("whatsapp-button");
-        var isScrolling = false;
-        var timer = null;
-
-        window.addEventListener("scroll", function () {
-            // clear the timeout on scroll
-            clearTimeout(timer);
-
-            // set isScrolling to true
-            isScrolling = true;
-
-            // set the button's opacity to 0
-            whatsappButton.style.opacity = 0.2;
-
-            // set a timeout to check if the user has stopped scrolling
-            timer = setTimeout(function () {
-                isScrolling = false;
-
-                // set the button's opacity to 1 if the user has stopped scrolling
-                if (!isScrolling) {
-                    whatsappButton.style.opacity = 1;
-                }
-            }, 100);
-        });
-    </script>
+ 
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -128,6 +103,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a class="nav-item text-light nav-link" onclick="scrollToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('reviewlah')">Reviews</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
                       
                     <a href="about.html" class="nav-item text-light nav-link">About us</a>
                 </div>
@@ -236,10 +213,9 @@
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-secondary text-uppercase">About Us</h5>
                         <h1 class="mb-0 text-white">Unleash your programming potential with TeachX</h1>
                     </div>
-                    <p class="mb-4 text-white">where cutting-edge technology meets personalized coaching. Experience the pinnacle of programming education through our exclusive <span class="highlight">1-to-1 personal coaching</span> , seamlessly integrated with the power of cloud computing. Our mission is simple yet profound: to ignite rapid learning , unleash creativity, and elevate programming skills to unprecedented heights. By harnessing practical methods, we <span class="highlight  ">minimize the time required for mastery</span> , unlocking your true programming genius.</p>
+                    <p class="mb-4 text-white">where cutting-edge technology meets personalized coaching. Experience the pinnacle of programming education through our exclusive <span class="highlight"> 1-to-1 personal coaching </span> , seamlessly integrated with the power of cloud computing. Our mission is simple yet profound: to ignite rapid learning , unleash creativity, and elevate programming skills to unprecedented heights. By harnessing practical methods, we <span class="highlight  " >  minimize the time required for mastery </span> , unlocking your true programming genius.</p>
 
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
@@ -263,7 +239,7 @@
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                            src="img/about.png" style="object-fit: cover;">
+                            src="img/front-page-image.png" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -271,7 +247,7 @@
     </div>
     <!-- About End -->
 
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="courseslah">
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s"  >
     <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
             <h5 class="fw-bold text-secondary text-uppercase">Portfolio</h5>
@@ -491,7 +467,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 wow fadeInUp " id="reviewlah" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-secondary text-uppercase">Testimonial</h5>

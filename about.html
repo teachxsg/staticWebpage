@@ -32,12 +32,22 @@
 </head>
 
 <body class="body">
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()"
+        style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+    </button>
+ 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
-  
+
+
+
+
+
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -49,7 +59,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="moveToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="moveToDiv('reviewlah')">Reviews</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
                       
                     <a href="about.html" class="nav-item text-light nav-link">About us</a>
                 </div>
@@ -133,7 +145,7 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-secondary text-uppercase">Team</h5>
+                <h5 class="fw-bold text-secondary text-uppercase">Founders</h5>
                 <h1 class="mb-0 text-white">Passionate programming tutors</h1>
             </div>
             <div class="row g-5">

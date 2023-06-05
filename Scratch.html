@@ -32,12 +32,22 @@
 </head>
 
 <body class="body">
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()"
+        style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+    </button>
+ 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
-  
+
+
+
+
+
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -49,7 +59,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="moveToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="moveToDiv('reviewlah')">Reviews</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
                       
                     <a href="about.html" class="nav-item text-light nav-link">About us</a>
                 </div>
@@ -59,10 +71,9 @@
     </div>
     </nav>
 
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="container-fluid bg-primary py-5 bg-scratch-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div style="text-align: center;margin-top: 50px; ">
-                    <img style="width:35%" src="img/scratch-logo.png" alt="python basics picture"  >
                 </div>
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">Introduction to Scratch</h1> 

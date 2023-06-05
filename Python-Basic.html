@@ -31,37 +31,48 @@
 </head>
 
 <body class="body">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
-  
-    <!-- Navbar & Carousel Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class=" me-2"></i><img src="img/logo.png" width="200" height="78"></h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('courseslah')">Courses</a>
-                      
-                    <a href="about.html" class="nav-item text-light nav-link">About us</a>
-                </div>
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()"
+    style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+    <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+</button>
 
+<!-- Spinner Start -->
+<div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+</div>
+<!-- Spinner End -->
+
+
+
+
+
+<!-- Navbar & Carousel Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0"><i class=" me-2"></i><img src="img/logo.png" width="200" height="78"></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a class="nav-item text-light nav-link" onclick="moveToDiv('courseslah')">Courses</a>
+                <a class="nav-item text-light nav-link" onclick="moveToDiv('reviewlah')">Reviews</a>
+                <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
+                  
+                <a href="about.html" class="nav-item text-light nav-link">About us</a>
             </div>
 
-    </div>
-    </nav>
+        </div>
 
-        <div class="container-fluid bg-primary py-5 bg-header">
+</div>
+</nav>
+
+        <div class="container-fluid bg-primary py-5 bg-python-header">
             <div class="row py-5">
                 <div style="text-align: center;margin-top: 50px;">
-                <img src="img/python-logo.png" alt="python basics picture" style="max-width: 400px;max-height: 400px;">
                 </div>
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">Python Basics</h1> 
