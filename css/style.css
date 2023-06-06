@@ -700,13 +700,13 @@ h6,
     position: relative;
   }
 
-  .subpoints {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-  }
+.subpoints {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-out;
+}
 
-  .subpoints.expanded {
-    max-height: 500px; /* Adjust the value to fit your content */
-    transition: max-height 1.5s ease-in;
-  }
+.subpoints.expanded {
+max-height: 500px; /* Adjust the value to fit your content */
+transition: max-height 1.5s ease-in;
+}
