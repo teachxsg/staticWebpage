@@ -210,3 +210,24 @@ window.addEventListener("scroll", function () {
         }
     }, 100);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var subpointsList = document.querySelectorAll(".subpoints");
+
+    for (var i = 0; i < subpointsList.length; i++) {
+        var subpoints = subpointsList[i];
+        var parentItem = subpoints.parentNode;
+
+        parentItem.addEventListener("mouseenter", function() {
+        var subpoints = this.querySelector(".subpoints");
+        subpoints.style.maxHeight = subpoints.scrollHeight + "px";
+        });
+
+        parentItem.addEventListener("mouseleave", function() {
+        var subpoints = this.querySelector(".subpoints");
+        subpoints.style.maxHeight = "0";
+        });
+    }
+    });
+
+ 
