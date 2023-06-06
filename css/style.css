@@ -642,9 +642,9 @@ h6,
 }
 
 .highlight {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 174, 0);
+    /* font-weight: bold; */
     border-radius: 5px;
 }
 
@@ -692,3 +692,21 @@ h6,
         line-height:30px !important;
         }
 }
+
+.outline-box {
+    background-color: #d1ffd1;
+    border: 2px solid #008000;
+    padding: 10px;
+    position: relative;
+  }
+
+  .subpoints {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .subpoints.expanded {
+    max-height: 500px; /* Adjust the value to fit your content */
+    transition: max-height 1.5s ease-in;
+  }
