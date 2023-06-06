@@ -1,1 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <title>TeachX - kickstart your child's coding journey </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="python tuition, 1 on 1 coding lessons, scratch lessons, the best python, highest python, singapore python, scratch singapore"
+        name="keywords">
+    <meta content="Personalied Programming lessons for beginners " name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Position the button */
+        .floating-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 99;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Style the button */
+        .floating-button button {
+            background-color: #25D366;
+            color: white;
+            padding: 16px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Add a hover effect to the button */
+        .floating-button button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Make the button fade out when scrolling */
+        .floating-button.fade-out {
+            opacity: 0;
+        }
+
+        ::selection {
+            /* color: red; */
+            background-color: #006600;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()"
+        style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+    </button>
+ 
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><i class=" me-2"></i><img src="img/logo.png" width="200" height="78"></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('courseslah')">Courses</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('reviewlah')">Reviews</a>
+                    <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
+                      
+                    <a href="about.html" class="nav-item text-light nav-link">About us</a>
+                </div>
+
+            </div>
+
+    </div>
+    </nav>
+
+    <div id="header-carousel" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="img/landing-img.webp" alt="landing">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Empowering young coders</h1>
+                        <button href="freetrial" class="btn btn-success py-md-3 px-md-5 me-3 animated slideInLeft"
+                            onclick="scrollToDiv('contactlah')">Free Trial</button>
+                        <button href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
+                            onclick="scrollToDiv('contactlah')">Enquire Now </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn  btn-success px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="bg-success shadow-lg d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="bi bi-currency-dollar "></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Recorded Lessons </h5>
+                            <h1 class="text-white mb-0">Accessible</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="bg-light shadow-lg d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-success d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-success mb-0">Eligible for DSA application </h5>
+                            <h1 class="text-dark mb-0">Portfolio</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-success shadow-lg d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="bi bi-award text-success"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Premium</h5>
+                            <h1 class=" text-white mb-0">1:1 lessons</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h1 class="mb-0 text-white">Unleash your programming potential with TeachX</h1>
+                    </div>
+                    <p class="mb-4 text-white">where cutting-edge technology meets personalized coaching. Experience the pinnacle of programming education through our exclusive <span class="highlight"> 1-to-1 personal coaching </span> , seamlessly integrated with the power of cloud computing. Our mission is simple yet profound: to ignite rapid learning , unleash creativity, and elevate programming skills to unprecedented heights. By harnessing practical methods, we <span class="highlight  " >  minimize the time required for mastery </span> , unlocking your true programming genius.</p>
+
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Fully cloud based
+                            </h5>
+                            <h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Professional
+                                Staff</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Project based
+                                approach</h5>
+                            <h5 class="mb-3 text-white"><i class="fa fa-check text-secondary me-3"></i>Your personalised portfolio webapp</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <!-- <button class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                        </button> -->
+                    </div>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
+                            src="img/front-page-image.png" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s"  >
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-secondary text-uppercase">Portfolio</h5>
+            <h1 class="mb-0 text-white">teachx.me/your_name</h1>
+        </div>
+        <div class="text-center">
+            <h2 class="mb-4 text-white">Personalised Portfolio Showcase</h2>
+            <p class="text-white">
+                The TeachX Portfolio Webpage is a revolutionary feature designed exclusively for TeachX. Through this cutting-edge offering, we create a personalized webpage for each student under the teachx.me/yourname domain. This webpage serves as an interactive platform showcasing an extensive library of projects completed during their learning journey with us.
+            </p>
+            <p class="text-white">
+                We proudly refer to this as our Practical Certificate, a powerful testament to your programming proficiency. While traditional physical certificates capture achievements, our Practical Certificate goes beyond mere documentation. By showcasing the projects you have developed, it provides a visually compelling and easily accessible demonstration of your practical skills as a programmer.
+            </p>
+            <p class="text-white">
+                In today's rapidly evolving world, the significance of a personal portfolio cannot be overstated. By empowering your child with a robust portfolio from the outset, they gain a solid foundation upon which to build their future endeavors. This forward-thinking approach ensures that your child enters the realm of programming armed with a compelling showcase of their abilities, setting them apart from the competition and positioning them for success.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="courseslah">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-secondary text-uppercase">Our Courses</h5>
+                <h1 class="mb-0 text-white">Pick the perfect course for your child</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s" href="Scratch.html">
+                    <a href="Scratch.html" class="card-link">
+                        <div
+                            class="card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-shield-alt text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary">Scratch</h4>
+                            <p class="m-0 text-white">Block based programming to nuture the young one to grasp
+                                computational thinking</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <a href="Python-Basic.html" class="card-link">
+                        <div
+                            class="card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-chart-pie text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary ">Python Basics</h4>
+                            <p class="m-0 text-white">One of the best gateway language to learn programming in 21st
+                                century
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <a href="chat-gpt.html" class="card-link">
+                        <div
+                            class="prerequesite card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-code text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary">Chat-GPT</h4>
+                            <p class="m-0 text-white">Learn how to effectively use chat-gpt to self-learn and build things</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <a href="game-development.html" class="card-link">
+                        <div
+                            class="prerequesite card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-code text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary">Game development</h4>
+                            <p class="m-0 text-white">Game development with python</p>
+
+                            <div class="d-flex flex-row bd-highlight mb-3" style="margin-top:10px">
+                                <div class="hide p-2 bd-highlight pre-requisite">pre-requisite - Python basics</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <a href="web-development.html" class="card-link">
+                        <div
+                            class="prerequesite card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-code text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary">Web development</h4>
+                            <p class="m-0 text-white">Web development with python using flask</p>
+
+                            <div class="d-flex flex-row bd-highlight mb-3" style="margin-top:10px">
+                                <div class="hide p-2 bd-highlight pre-requisite">pre-requisite - Python basics</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <a href="telegram-bots.html" class="card-link">
+                        <div
+                            class="prerequesite card1 zoom service-item shadow-lg rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon bg-success">
+                                <i class="fa fa-code text-white"></i>
+                            </div>
+                            <h4 class="mb-3 text-secondary">Telegram bots</h4>
+                            <p class="m-0 text-white">make your own bot that you can talk to in telegram</p>
+
+                            <div class="d-flex flex-row bd-highlight mb-3" style="margin-top:10px">
+                                <div class="hide p-2 bd-highlight pre-requisite">pre-requisite - Python basics</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-secondary text-uppercase">Course Pricing</h5>
+                <h1 class="mb-0"></h1>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <div class=" shadow-lg rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-secondary mb-1">Standard</h4>
+                            <small class="text-uppercase text-white">Monthly package</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3 text-white">
+                                <small class="align-top"
+                                    style="font-size: 22px; line-height: 45px;">$</small>399<small
+                                    class="align-bottom text-success" style="font-size: 16px; line-height: 40px;">/
+                                    month</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>Personalied 1:1
+                                    Coaching</span><i class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>fully cloud based
+                                </span><i class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>Live progress
+                                    tracking</span><i class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2 text-white"><span> Projects</span><i
+                                    class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2 text-white"><span>Web based Portfolio Certificate</span><i
+                                class="fa fa-check text-secondary pt-1"></i></div>
+                            <!-- <a href="/freetrial" class="btn  btn-success py-2 px-4 mt-4  ">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="shadow-lg rounded shadow-lg position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-secondary mb-1">Exclusive package</h4>
+                            <small class="text-uppercase text-white">3 months package <span class="discount">save $300</span></small>
+                        </div>
+                        
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3 text-white">
+                                <small class="align-top"
+                                    style="font-size: 22px; line-height: 45px;">$</small>299<small
+                                    class="align-bottom text-success" style="font-size: 16px; line-height: 40px;">/ month</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>Personalied 1:1
+                                    Coaching</span><i class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>fully cloud based</span><i
+                                    class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3 text-white"><span>Live progress
+                                    tracking</span><i class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2 text-white"><span> projects</span><i
+                                    class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2 text-white"><span>Web based Portfolio Certificate</span><i
+                                class="fa fa-check text-secondary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2 text-white"><span class="discount"> Zero risk refunds </span><i
+                                class="fa fa-check text-secondary pt-1"></i></div>
+                            <!-- <a href="/freetrial" class="btn  btn-success py-2 px-4 mt-4  ">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+
+
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5 wow fadeInUp " id="reviewlah" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-secondary text-uppercase">Testimonial</h5>
+                <h1 class="mb-0 text-light">What our students say about our lessons</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg"
+                            style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-secondary mb-1">Anirud </h4>
+                            <small class="text-uppercase">Primary School ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        I find the lessons very fun and engaging, as it has helped me grasp quantum mechanics and string
+                        theory at a young age
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/divijaa.jpg" style="width:  60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-secondary mb-1">Divijaa</h4>
+                            <small class="text-uppercase">Secondary School ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Love the projects they offer it has given me a insight into how the application of python help
+                        solve real world problems
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/rojin-sreeram_news.png"
+                            style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-secondary mb-1">Rojin </h4>
+                            <small class="text-uppercase">SINDA's Best Overall Academic Performer</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        The theory at the begining builds the fundementals, while the projects solidify the application
+                        and makes it easier to recall
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/tanish-face.jpeg" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-secondary mb-1">Tanish</h4>
+                            <small class="text-uppercase">Primary Schoolㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ </small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        I truly like the Scratch lessons a lot and would like to thank my teacher for being so good and
+                        patient with me.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+
+    <!-- Footer Start -->
+    <!-- Quote Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="contactlah">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-secondary text-uppercase">Contact us</h5>
+                        <h1 class="mb-0 text-white">Schedule your free trial</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4 text-secondary"><i class="fa fa-reply text-secondary me-3"></i>Replies
+                                within 30 minutes!</h5>
+                        </div>
+
+                    </div>
+                    <p class="mb-4 text-white">Contact us through <u class="thick-green-underline">Whatsapp, phone,
+                            email or form</u> to ask any questions about our programme or to <u
+                            class="thick-green-underline">schedule a free trial</u>.</p>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white shadow-lg rounded"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white ">Call to ask any question</h5>
+                            <h4 class="text-secondary mb-0">+65 8065 8664</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white">Email For more info</h5>
+                            <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                        </div>
+
+                    </div>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-success btn-square me-2"
+                            href="https://m.facebook.com/people/TeachX-SG/100088575681736/"><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-success btn-square" href="https://www.instagram.com/teachxsg/"><i
+                                class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                    <!-- <div class="col-lg-4">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                            <div class="bg-secondary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2 text-white">Email For more info</h5>
+                                <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec -->
+                <div class="col-lg-5">
+                    <div class=" shadow-lg rounded h-100 d-flex align-items-center p-5 wow zoomIn"
+                        data-wow-delay="0.9s">
+                        <form id="signUpForm" name="ok">
+                            <div class="row g-3">
+                                <div class="col-xl-12" hidden>
+                                    <input hidden type="text" name="type" value="signUp">
+                                </div>
+                                <div class="col-xl-12">
+                                    <input type="text" name="name" class="form-control bg-light border-0"
+                                        placeholder="Your Name" style="height: 55px;" maxlength="36">
+                                    <div id="nameError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" class="form-control bg-light border-0"
+                                        placeholder="Email" style="height: 55px;">
+                                    <div id="emailError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="phone" name="phone" class="form-control bg-light border-0"
+                                        placeholder="Phone" style="height: 55px;" pattern="[689]\d{7}">
+                                    <div id="phoneError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" name="subject" style="height: 55px;">
+                                        <option disabled selected>Course</option>
+                                        <option value="1">Scratch lessons</option>
+                                        <option value="2">Python lessons</option>
+                                        <option value="3">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0"
+                                        placeholder="Your message" style="height: 55px; resize: none;"
+                                        maxlength="120"></textarea>
+                                    <div id="messageError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-success w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec'
+                            const form = document.forms['ok']
+
+                            form.addEventListener('submit', e => {
+                                e.preventDefault();
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                                const myElement = document.getElementById('signUpForm');
+                                myElement.innerHTML = '<div style="background-color:green;color:white;padding:10px;"><p>We will contact you back ASAP.</p>- TeachX Team</div>'
+                            })
+                        </script>
+                        <script>
+                            function validateForm() {
+                                let name = document.forms["signUpForm"]["name"].value;
+                                let email = document.forms["signUpForm"]["email"].value;
+                                let phone = document.forms["signUpForm"]["phone"].value;
+                                let message = document.forms["signUpForm"]["message"].value;
+
+                                // Name validation
+                                if (name.length > 36) {
+                                    alert("Name should be maximum 36 characters long.");
+                                    return false;
+                                }
+
+                                // Email validation
+                                let emailRegex = /\S+@\S+\.\S+/;
+                                if (!emailRegex.test(email)) {
+                                    alert("Please enter a valid email address.");
+                                    return false;
+                                }
+
+                                // Phone validation
+                                let phoneRegex = /^\+65[689]\d{7}$/;
+                                if (!phoneRegex.test(phone)) {
+                                    alert("Please enter a valid Singapore phone number.");
+                                    return false;
+                                }
+
+                                // Message validation
+                                if (message.split(" ").length > 120) {
+                                    alert("Message should be maximum 120 words long.");
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+    <div class="container-fluid   text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">TeachX PTE LTD</a>. All
+                            Rights Reserved.
+
+                            credits to <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg  btn-success btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQXR0BMWL7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QQXR0BMWL7');
+    </script>
+    <script>
+       
+
+    </script>
+
+</html>
+</body>
+
+</html>
