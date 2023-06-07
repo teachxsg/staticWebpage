@@ -491,6 +491,12 @@ h6,
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/python-background.png) center center no-repeat;
     background-size: cover;
 }
+
+.bg-template-header {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/template-image.png) center center no-repeat;
+    background-size: cover;
+}
+
 .bg-chatgpt-header {
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/chat-gpt-banner.png) center center no-repeat;
     background-size: cover;
