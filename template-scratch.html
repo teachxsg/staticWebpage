@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TeachX - Next level learning</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Programming Lesson for kids" name="keywords">
+    <meta content="Free Trial lessons, Python programming lessons " name="description">
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    <button id="whatsapp-button" class="btn btn-success btn-lg" onclick="openWhatsApp()"
+    style="position: fixed; bottom: 50px; left: 50px; z-index: 9999; opacity: 1;">
+    <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+</button>
+
+<!-- Spinner Start -->
+<div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+</div>
+<!-- Spinner End -->
+
+
+
+
+
+<!-- Navbar & Carousel Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar   navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0"><i class=" me-2"></i><img src="img/logo.png" width="200" height="78"></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a class="nav-item text-light nav-link" onclick="moveToDiv('courseslah')">Courses</a>
+                <a class="nav-item text-light nav-link" onclick="moveToDiv('reviewlah')">Reviews</a>
+                <a class="nav-item text-light nav-link" onclick="scrollToDiv('contactlah')">Contact Us</a>
+                  
+                <a href="about.html" class="nav-item text-light nav-link">About us</a>
+            </div>
+
+        </div>
+
+</div>
+</nav>
+
+        <div class="container-fluid bg-primary py-5 bg-python-header">
+            <div class="row py-5">
+                <div style="text-align: center;margin-top: 50px;">
+                </div>
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Python Basics</h1> 
+                    <a href="" class="h5 text-white">An Indept overview on syllabus</a>
+                </div>
+            </div>
+        </div>
+ 
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+  <button id="whatsapp-button" class="heart btn btn-success btn-lg"  data-bs-toggle="tooltip" data-bs-placement="left" title="Download pdf" style="position: fixed; top: 130px; right: 40px; z-index: 9999; ">
+        <i class="bi bi-file-earmark-arrow-down-fill" ></i>
+    </button>
+    <!-- Full Screen Search End -->
+    <!-- Blog Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5 d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Blog Detail Start -->
+                    <div class="mb-8">
+                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                            <h5 class="fw-bold text-secondary text-uppercase">Coded projects</h5>
+                        </div>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/611260379/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    <div class="mb-8">
+                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                            <h5 class="fw-bold text-secondary text-uppercase">Coded projects</h5>
+                        </div>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/10128515/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                            <h5 class="fw-bold text-secondary text-uppercase">Coded projects</h5>
+                        </div>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/2412780/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                            <h5 class="fw-bold text-secondary text-uppercase">Coded projects</h5>
+                        </div>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/93902878/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    <div class="mb-8">
+                        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                            <h5 class="fw-bold text-secondary text-uppercase">Coded projects</h5>
+                        </div>
+                        <iframe class='scratch-embed scratch-basic  wow zoomIn' data-wow-delay="0.6s"  src="https://scratch.mit.edu/projects/461576726/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+
+
+                    <!-- Blog Detail End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+ 
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="contactlah">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-secondary text-uppercase">Contact us</h5>
+                        <h1 class="mb-0 text-white">Schedule your free trial</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4 text-secondary"><i class="fa fa-reply text-secondary me-3"></i>Replies
+                                within 30 minutes!</h5>
+                        </div>
+
+                    </div>
+                    <p class="mb-4 text-white">Contact us through <u class="thick-green-underline">Whatsapp, phone,
+                            email or form</u> to ask any questions about our programme or to <u
+                            class="thick-green-underline">schedule a free trial</u>.</p>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white shadow-lg rounded"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white ">Call to ask any question</h5>
+                            <h4 class="text-secondary mb-0">+65 8065 8664</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-secondary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-white">Email For more info</h5>
+                            <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                        </div>
+
+                    </div>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-success btn-square me-2"
+                            href="https://m.facebook.com/people/TeachX-SG/100088575681736/"><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-success btn-square" href="https://www.instagram.com/teachxsg/"><i
+                                class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                    <!-- <div class="col-lg-4">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                            <div class="bg-secondary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2 text-white">Email For more info</h5>
+                                <h4 class="text-secondary mb-0">admin@teachx.me</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec -->
+                <div class="col-lg-5">
+                    <div class=" shadow-lg rounded h-100 d-flex align-items-center p-5 wow zoomIn"
+                        data-wow-delay="0.9s">
+                        <form id="signUpForm" name="ok">
+                            <div class="row g-3">
+                                <div class="col-xl-12" hidden>
+                                    <input hidden type="text" name="type" value="signUp">
+                                </div>
+                                <div class="col-xl-12">
+                                    <input type="text" name="name" class="form-control bg-light border-0"
+                                        placeholder="Your Name" style="height: 55px;" maxlength="36">
+                                    <div id="nameError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" class="form-control bg-light border-0"
+                                        placeholder="Email" style="height: 55px;">
+                                    <div id="emailError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="phone" name="phone" class="form-control bg-light border-0"
+                                        placeholder="Phone" style="height: 55px;" pattern="[689]\d{7}">
+                                    <div id="phoneError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" name="subject" style="height: 55px;">
+                                        <option disabled selected>Course</option>
+                                        <option value="1">Scratch lessons</option>
+                                        <option value="2">Python lessons</option>
+                                        <option value="3">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0"
+                                        placeholder="Your message" style="height: 55px; resize: none;"
+                                        maxlength="120"></textarea>
+                                    <div id="messageError" class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-success w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec'
+                            const form = document.forms['ok']
+
+                            form.addEventListener('submit', e => {
+                                e.preventDefault();
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                                const myElement = document.getElementById('signUpForm');
+                                myElement.innerHTML = '<div style="background-color:green;color:white;padding:10px;"><p>We will contact you back ASAP.</p>- TeachX Team</div>'
+                            })
+                        </script>
+                        <script>
+                            function validateForm() {
+                                let name = document.forms["signUpForm"]["name"].value;
+                                let email = document.forms["signUpForm"]["email"].value;
+                                let phone = document.forms["signUpForm"]["phone"].value;
+                                let message = document.forms["signUpForm"]["message"].value;
+
+                                // Name validation
+                                if (name.length > 36) {
+                                    alert("Name should be maximum 36 characters long.");
+                                    return false;
+                                }
+
+                                // Email validation
+                                let emailRegex = /\S+@\S+\.\S+/;
+                                if (!emailRegex.test(email)) {
+                                    alert("Please enter a valid email address.");
+                                    return false;
+                                }
+
+                                // Phone validation
+                                let phoneRegex = /^\+65[689]\d{7}$/;
+                                if (!phoneRegex.test(phone)) {
+                                    alert("Please enter a valid Singapore phone number.");
+                                    return false;
+                                }
+
+                                // Message validation
+                                if (message.split(" ").length > 120) {
+                                    alert("Message should be maximum 120 words long.");
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+    <div class="container-fluid   text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">TeachX PTE LTD</a>. All
+                            Rights Reserved.
+
+                            credits to <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg  btn-success btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVZ24GPESJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NVZ24GPESJ');
+</script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
