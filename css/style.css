@@ -716,3 +716,27 @@ transition: max-height 0.5s ease-out;
 max-height: 500px; /* Adjust the value to fit your content */
 transition: max-height 1.5s ease-in;
 }
+.bookmark-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid #f8d61e;
+}
+
+.bookmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #f8d61e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
