@@ -190,6 +190,9 @@ var whatsappButton = document.getElementById("whatsapp-button");
 var isScrolling = false;
 var timer = null;
 
+var freetrialButton = document.getElementById("freetrial-button");
+
+
 window.addEventListener("scroll", function () {
     // clear the timeout on scroll
     clearTimeout(timer);
@@ -210,7 +213,9 @@ window.addEventListener("scroll", function () {
         }
     }, 100);
 });
+ 
 
+ 
 document.addEventListener("DOMContentLoaded", function() {
     var subpointsList = document.querySelectorAll(".subpoints");
 
