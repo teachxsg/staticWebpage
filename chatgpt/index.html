@@ -131,27 +131,7 @@
                         <h5 class="mb-4 text-white">Unlock the Secret Power of Chat GPT: Boost Your productivity and Success Now</h5>
                         <h5 class="mb-4 text-secondary"><i class="fa fa-calendar text-secondary me-3"></i> 8 July 2023 </h5>
                         <h5 class="mb-4 text-secondary"><i class="fa fa-clock text-secondary me-3"></i> 11AM to 12.30PM </h5>
-                        <h5 class="mb-4 text-secondary"> <add-to-calendar-button
-                            name="ChatGPT Seminar"
-                            options="'Apple','Google'"
-                            location="World Wide Web"
-                            startDate="2023-07-08"
-                            endDate="2023-07-08"
-                            startTime="11:00"
-                            endTime="12:30"
-                            timeZone="Asia/Singapore"
-                            organizer="TeachX Sg|admin@teachx.me"
-                            description="🚀 Unleash the Power of Chat GPT! 🚀
-
-Ready to experience a game-changing seminar that will transform the way you communicate? Join us for a thrilling 1.5-hour deep dive into the captivating world of Chat GPT! 💬✨
-Discover mind-blowing tips and tricks that will revolutionize not just your professional life, but also your personal interactions. From skyrocketing business success to mastering the art of engaging conversations, this seminar is your ticket to a future powered by AI.
-💡 Don't miss out on the chance to uncover the secrets of AI-powered communication that can unlock boundless opportunities for you. Secure your spot now and be part of the revolution www.teachx.me ! 🌟
-email: admin@teachx.me
-📍 Location: Google Meet
-💵 Cost: free
-🎟️ Limited slots available! Register now to secure your spot by contacting us or booking at https://teachx.me/chatgpt."
-                          ></add-to-calendar-button>
-                        </h5>
+ 
                     </div>
 
                 </div>
@@ -200,6 +180,7 @@ email: admin@teachx.me
             <div class="col-lg-5">
                 <div class=" shadow-lg rounded h-100 d-flex align-items-center p-5 wow zoomIn"
                     data-wow-delay="0.9s">
+                    <div>
                     <form id="signUpForm" name="ok">
                         <div class="row g-3">
                             <div class="col-xl-12" hidden>
@@ -230,7 +211,33 @@ email: admin@teachx.me
                                 <button class="btn btn-success w-100 py-3" type="submit">Submit</button>
                             </div>
                         </div>
-                    </form>
+                    </form></div>
+                    <div class="mb-4 text-secondary d-none" id="calendarButton"> <add-to-calendar-button
+                        name="ChatGPT Seminar"
+                        options="'Apple','Google'"
+                        location="World Wide Web"
+                        startDate="2023-07-08"
+                        endDate="2023-07-08"
+                        startTime="11:00"
+                        endTime="12:30"
+                        timeZone="Asia/Singapore"
+                        organizer="TeachX Sg|admin@teachx.me"
+                        description="🚀 Unleash the Power of Chat GPT! 🚀
+    
+    Ready to experience a game-changing seminar that will transform the way you communicate? Join us for a thrilling 1.5-hour deep dive into the captivating world of Chat GPT! 💬✨
+    Discover mind-blowing tips and tricks that will revolutionize not just your professional life, but also your personal interactions. From skyrocketing business success to mastering the art of engaging conversations, this seminar is your ticket to a future powered by AI.
+    
+    💡 Don't miss out on the chance to uncover the secrets of AI-powered communication that can unlock boundless opportunities for you. Secure your spot now and be part of the revolution www.teachx.me ! 🌟
+    
+    Email: admin@teachx.me
+    
+    📍 Location: Google Meet
+    
+    💵 Cost: free
+    
+    🎟️ Limited slots available! Register now to secure your spot by contacting us or booking at https://teachx.me/chatgpt."
+                      ></add-to-calendar-button>
+                    </div>
                     <script>
                         const scriptURL = 'https://script.google.com/macros/s/AKfycbyyOjhvWJi1tvjZnfYDwavLqVqZH-uatc046as5pyyX485yYO3HPJw3U1W4v8HzP8SR/exec'
                         const form = document.forms['ok']
@@ -239,7 +246,9 @@ email: admin@teachx.me
                             e.preventDefault();
                             fetch(scriptURL, { method: 'POST', body: new FormData(form) });
                             const myElement = document.getElementById('signUpForm');
-                            myElement.innerHTML = '<div style="background-color:green;color:white;padding:10px;"><p>We will contact you back ASAP.</p>- TeachX Team</div>'
+                            const calButton = document.getElementById('calendarButton');
+                            myElement.innerHTML = '<div class="text-secondary"><p>Add the event to your calendar.</p>  </div>'
+                            calButton.classList.remove("d-none")
                         })
                     </script>
                     <script>
@@ -280,6 +289,7 @@ email: admin@teachx.me
                     </script>
 
                 </div>
+
             </div>
         </div>
     </div>
