@@ -147,7 +147,7 @@ function SubmitSignup() {
 };
 function openWhatsApp() {
     var number = "+6580658664";
-    var message = "Hi TeachX, I'm interested in a free trial";
+    var message = "Hi TeachX, I'm interested in the ChatGPT Course";
     window.location = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
 }
 
