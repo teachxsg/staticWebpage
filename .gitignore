@@ -1,0 +1,6 @@
+output/
+node_modules/
+result/
+trash/
+/package-lock.json
+/package.json
