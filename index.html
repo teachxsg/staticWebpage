@@ -723,6 +723,10 @@
                             form.addEventListener('submit', e => {
                                 e.preventDefault();
                                 fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                                window.dataLayer.push({
+                                    'event': 'form submit',
+                                    'formLocation': 'main page'
+                                    });
                                 const myElement = document.getElementById('signUpForm');
                                 myElement.innerHTML = '<div style="background-color:green;color:white;padding:10px;"><p>We will contact you back ASAP.</p>- TeachX Team</div>'
                             })

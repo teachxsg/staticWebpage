@@ -245,6 +245,10 @@
                         form.addEventListener('submit', e => {
                             e.preventDefault();
                             fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+                                window.dataLayer.push({
+                                    'event': 'form submit',
+                                    'formLocation': 'chatGPT page'
+                                    });
                             const myElement = document.getElementById('signUpForm');
                             const calButton = document.getElementById('calendarButton');
                             myElement.innerHTML = '<div class="text-secondary"><p>Add the event to your calendar.</p>  </div>'
