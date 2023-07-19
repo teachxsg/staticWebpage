@@ -145,9 +145,8 @@ function SubmitSignup() {
             console.error('Error sending form data:', error);
         });
 };
-function openWhatsApp() {
+function openWhatsApp(message) {
     var number = "+6580658664";
-    var message = "Hi TeachX, I'm interested in a free trial";
     window.location = "https://api.whatsapp.com/send?phone=" + number + "&text=" + message;
 }
 
